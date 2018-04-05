@@ -1,3 +1,11 @@
+class Habitat(object):
+    def __init__(self, location, climate):
+        self.location = location
+        self.climate = climate
+
+    def print_habitat(self):
+        print 'Location: {}, Climate: {}'.format(self.location, self.climate)
+
 # This is a class ---- blueprint, schematic, recipe, structure
 class Animal(object):
     def __init__(self, animal_name, habitat, weight): # This line initializes the class
@@ -13,7 +21,9 @@ class Animal(object):
         print self.name
 
     def print_habitat(self):
-        print self.habitat
+        for habitat in self.habitat:
+            # what is habitat? Habitat object
+            habitat.print_habitat()
         return self
 
     def print_weight(self):
@@ -30,8 +40,10 @@ class Dog(Animal):
 # You made this from the Animal class.
 # The house, the thing, the food, the
 # Animal - class
-dog = Dog('Toby', 'woooooOooOOOOOof', 'living room couch', 55)
+couch = Habitat('Carrollton', 'room temperature')
+greenChair = Habitat('living room', 'cold')
+dog = Dog('Toby', 'woooooOooOOOOOof', [couch, greenChair], 55)
 dog.print_name() # Animal.print_name(dog)
-print dog.bloodflow
-print dog.voice
-dog.print_habitat().print_weight().print_habitat()
+# print dog.bloodflow
+# print dog.voice
+dog.print_habitat()
