@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <form action="/login" method="POST">
+
+      <input type="hidden" name="whattodo" value="login">
+
+      <label for="username">Username: </label>
+      <input type="text" name="username" />
+
+      <label for="password">Password: </label>
+      <input type="password" name="password" />
+
+      <button type="submit">Login</button>
+
+    </form>
+
+    <form action="/login" method="POST">
+
+      <input type="hidden" name="whattodo" value="register">
+
+      <label for="username">Username: </label>
+      <input type="text" name="username" />
+
+      <label for="password">Password: </label>
+      <input type="password" name="password" />
+
+      <button type="submit">Register</button>
+
+    </form>
+  </body>
+</html>
