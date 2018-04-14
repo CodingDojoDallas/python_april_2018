@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <!-- <script src="https://gist.github.com/droptablestar/f987924d69ab74ff64011234c4b82577.js"></script> -->
+    <title>Friends</title>
+  </head>
+  <body>
+    <!-- <script src="https://gist.github.com/droptablestar/00cbe96b5a806e27c16678725cdc934a.js"></script> -->
+    This is an example page
+
+    {% for friend in all_friends %}
+      <p>ID: {{friend['id']}}</p>
+      <p>Name: {{friend['name']}}</p>
+      <p>Age: {{friend['age']}}</p>
+      <p>Friend Since: {{friend['friend_since']}}</p>
+    {% endfor %}
+
+    <form action="/" method="post">
+      <label for="name">Name: </label><input type="text" name="name" />
+      <label for="age">Age: </label><input type="number" name="age" />
+      <label for="friend_since">Friend Since: </label><input type="date" name="friend_since" />
+      <button type="submit" />Add Friend</button>
+    </form>
+  </body>
+</html>
